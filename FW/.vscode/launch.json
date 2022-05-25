@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "Debug",
+            "servertype": "openocd",
+            "runToEntryPoint": "main",
+            "cwd": "${workspaceRoot}",
+           
+            "interface": "swd",
+            "device": "STM32L031P",
+            "svdFile": "/home/max/SVD/STM32L0/STM32L0x1.svd",
+                     //"preLaunchTask": "cargo build",
+            "runToMain": true,
+            "executable": "build/FW.elf",
+            "configFiles": [
+                "/usr/local/share/openocd/scripts/interface/stlink-v2.cfg",
+                "/usr/local/share/openocd/scripts/target/stm32l0.cfg"
+                
+            ],
+           
+        }
+    ]
+}
