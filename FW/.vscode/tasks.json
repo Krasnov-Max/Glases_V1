@@ -26,7 +26,7 @@
         {
         "label": "Load Firmware",
         "type": "shell",
-        "command": "/usr/local/bin/st-flash write ./build/FW.bin 0x08000000",
+        "command": "/opt/st-link/v1.5.1/st-flash write ./build/FW.bin 0x08000000",
         "options": {
         "cwd": "${workspaceRoot}"
         },
